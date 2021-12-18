@@ -1,0 +1,66 @@
+[
+ {
+   "companyName": "Nestle",
+   "mainScore": 27.1,
+   "climate": "A-",
+   "water": "B",
+   "forests": "B",
+   "warning": ""
+ },
+ {
+   "companyName": "Coca Cola",
+   "mainScore": 22.5,
+   "climate": "A-",
+   "water": "A",
+   "forests": "B",
+   "warning": ""
+ },
+ {
+   "companyName": "Starbucks",
+   "mainScore": 20.9,
+   "climate": "B",
+   "water": "B",
+   "forests": "C",
+   "warning": ""
+ },
+ {
+   "companyName": "Nike",
+   "mainScore": 16.8,
+   "climate": "A-",
+   "water": "F",
+   "forests": "F",
+   "warning": ""
+ },
+ {
+   "companyName": "Pepsi",
+   "mainScore": 16,
+   "climate": "A-",
+   "water": "B",
+   "forests": "A",
+   "warning": ""
+ },
+ {
+   "companyName": "Lululemon",
+   "mainScore": 16.1,
+   "climate": "B",
+   "water": "F",
+   "forests": "F",
+   "warning": ""
+ },
+ {
+   "companyName": "Puma",
+   "mainScore": 16.6,
+   "climate": "A-",
+   "water": "B-",
+   "forests": "C",
+   "warning": ""
+ },
+ {
+   "companyName": "Hanes",
+   "mainScore": 13.9,
+   "climate": "A-",
+   "water": "B",
+   "forests": "C-",
+   "warning": ""
+ }
+]
