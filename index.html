@@ -2,59 +2,40 @@
 <html>
   <head>
     <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="loading.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 id="manufacturer"></h1>
-    <div id="main" class="circle"></div>
 
-    <div class="skill">
-      <div class="outer">
-        <div class="inner">
-          <div id="number">100%</div>
+    <div class="loading">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number">100%</div>
+          </div>
         </div>
       </div>
-    </div>
-    <script>
-      let number = document.getElementById("number");
-      let counter = 0;
-      setInterval(() => {
-        if(counter == 65){
-          clearInterval();
-        }else{
-          counter+=1;
-          number.innerHTML = counter+"%";
-          document.getElementById("circleBar").style.stroke = "rgb(" + counter*3 + "," + counter*3 + "," + 0 + ")"
-        }
-      },30)
-    </script>
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-         <defs>
-            <linearGradient id="GradientColor">
-               <stop offset="0%" stop-color="#e91e63" />
-               <stop offset="100%" stop-color="#673ab7" />
-            </linearGradient>
-         </defs>
-         <circle id="circleBar" cx="80" cy="80" r="70" stroke-linecap="round" />
- </svg>
 
-    <table border="1" cellpadding="3" style="border-collapse:collapse;">
-      <!-- <tr>
-        <td nowrap>Main Score:</td>
-        <td align="right"><span id="main">N/A</span></td>
-      </tr> -->
-      <tr>
-        <td nowrap>Climate Change:</td>
-        <td align="right"><span id="climate">N/A</span></td>
-      </tr>
-      <tr>
-        <td nowrap>Water:</td>
-        <td align="right"><span id="water">N/A</span></td>
-      </tr>
-      <tr>
-        <td nowrap>Forests:</td>
-        <td align="right"><span id="forests">N/A</span></td>
-      </tr>
-    </table>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+              </defs>
+              <circle id="circleBar" cx="60" cy="80" r="60" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div class="main-data">
+      <h1 id="manufacturer"></h1>
+      <div id="main" class="main-circle"></div>
+      <div class="circle-container">
+        <div id="climate" class="climate-circle"></div>
+        <div id="water" class="water-circle"></div>
+        <div id="forests" class="forests-circle"></div>
+      </div>
+    </div>
+
   </body>
 </html>

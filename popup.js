@@ -2,6 +2,8 @@ let companyData = [];
 
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
+  // document.querySelector(".loading").style.display = "none";
+  document.querySelector(".main-data").style.display = "block";
     let selectedCompany = companyData.filter(company => (
       company.companyName === info.manufacturer
     ))
@@ -27,6 +29,7 @@ const setDOMInfo = info => {
 
 
   };
+
   // Once the DOM is ready...
   window.addEventListener('DOMContentLoaded', () => {
     fetch("data.json")
