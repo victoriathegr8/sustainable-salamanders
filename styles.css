@@ -1,10 +1,54 @@
-.circle {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+  }
+  body{
+    background: #e3edf7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill{
+    width: 120px;
+    height: 120px;
+  }
+  .outer{
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    font-size: 50px;
-    color: #fff;
-    text-align: center;
-    background: #000
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
+  }
+  .inner{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #number{
+    font-weight: 600px;
+    color: #555;
+  }
+  circle{
+    fill: none;
+    stroke: cornflowerblue;
+    stroke-width: 20px; 
+    stroke-dasharray: 472; /*full is 472*/
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+  }
+  svg{
+    position: absolute;
+    top:100;
+    left: 200;
+  }
+  @keyframes anim{
+    100%{
+      stroke-dashoffset: 165;
+    }
   }
