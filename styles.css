@@ -99,3 +99,15 @@ span {
   /* .main-data {
     display: none;
   } */
+  .SearchBar{
+    top: 50px;
+    position: absolute;
+    width: 343px;
+    height: 45px;
+  
+    background: rgba(130, 130, 130, 0.21);
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-color: grey;
+    border-radius: 5px;
+  }
