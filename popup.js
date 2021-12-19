@@ -36,16 +36,16 @@ document.getElementById('submitsearch').addEventListener('click', function() {
     let newURL = selectedCompany.mainScoreLink;
     chrome.tabs.create({ url: newURL });
   });
-  /*
+  
   if(score<15){
-    document.getElementById('circleBar').style.color = "#89C73A";
+    document.getElementById('circleBar').setAttribute('style','stroke: #89C73A');
   } else if(score<20){
-    document.getElementById('circleBar').style.color = "#E6D05E";
+    document.getElementById('circleBar').setAttribute('style','stroke: #E6D05E');
   }else{
-    document.getElementById('circleBar').style.color = "#DB3C32";
+    document.getElementById('circleBar').setAttribute('style','stroke: #DB3C32');
   }
   console.log(document.getElementById('circleBar').style.stroke)
-  */
+  
 });
 
 document.querySelector("body").addEventListener('click', function(e) {
