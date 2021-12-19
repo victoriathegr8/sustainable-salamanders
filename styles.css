@@ -69,7 +69,21 @@
     left: 100px;
 
   }
+  .smallcircletext{
+    display: flex;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+  }
   .smaller-circle {
+    top: 100px;
+    display: flex;
+    position: relative;
     width: 75px;
     height: 75px;
     line-height: 75px;
