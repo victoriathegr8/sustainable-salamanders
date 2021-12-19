@@ -1,66 +1,82 @@
 [
- {
-   "companyName": "Nestle",
-   "mainScore": 27.1,
-   "climate": "A-",
-   "water": "B",
-   "forests": "B",
-   "warning": ""
- },
- {
-   "companyName": "Coca Cola",
-   "mainScore": 22.5,
-   "climate": "A-",
-   "water": "A",
-   "forests": "B",
-   "warning": ""
- },
- {
-   "companyName": "Starbucks",
-   "mainScore": 20.9,
-   "climate": "B",
-   "water": "B",
-   "forests": "C",
-   "warning": ""
- },
- {
-   "companyName": "Nike",
-   "mainScore": 16.8,
-   "climate": "A-",
-   "water": "F",
-   "forests": "F",
-   "warning": ""
- },
- {
-   "companyName": "Pepsi",
-   "mainScore": 16,
-   "climate": "A-",
-   "water": "B",
-   "forests": "A",
-   "warning": ""
- },
- {
-   "companyName": "Lululemon",
-   "mainScore": 16.1,
-   "climate": "B",
-   "water": "F",
-   "forests": "F",
-   "warning": ""
- },
- {
-   "companyName": "Puma",
-   "mainScore": 16.6,
-   "climate": "A-",
-   "water": "B-",
-   "forests": "C",
-   "warning": ""
- },
- {
-   "companyName": "Hanes",
-   "mainScore": 13.9,
-   "climate": "A-",
-   "water": "B",
-   "forests": "C-",
-   "warning": ""
- }
-]
+  {
+    "companyName": "Nestle",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/nestl-s-a/1007910219",
+    "mainScore": 24.2,
+    "climate": "A-",
+    "water": "B",
+    "forests": "B",
+    "warningLink": "https://www.zmescience.com/science/nestle-company-pollution-children/",
+    "warning": "Child Labor, High Water Waste"
+  },
+  {
+    "companyName": "Coca Cola",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/the-coca-cola-co/1007904888",
+    "mainScore": 22.5,
+    "climate": "A-",
+    "water": "A",
+    "forests": "B",
+    "warningLink": "https://www.breakfreefromplastic.org/2019/10/23/brand-audit-report-2019-press-release/",
+    "warning": "Leading plastic waste producer"
+  },
+  {
+    "companyName": "Starbucks",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/starbucks-corp/1007912991",
+    "mainScore": 20.9,
+    "climate": "B",
+    "water": "B",
+    "forests": "C",
+    "warningLink": "",
+    "warning": ""
+  },
+  {
+    "companyName": "Nike",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/nike-inc/1008170227",
+    "mainScore": 16.8,
+    "climate": "A-",
+    "water": "F",
+    "forests": "F",
+    "warningLink": "",
+    "warning": ""
+  },
+  {
+    "companyName": "PepsiCo",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/pepsico-inc/1007911100",
+    "mainScore": 16,
+    "climate": "A-",
+    "water": "B",
+    "forests": "A",
+    "warningLink": "",
+    "warning": ""
+  },
+  {
+    "companyName": "Lululemon",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/lululemon-athletica-inc/1042003440",
+    "mainScore": 16.1,
+    "climate": "B",
+    "water": "F",
+    "forests": "F",
+    "warningLink": "",
+    "warning": ""
+  },
+  {
+    "companyName": "Puma",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/puma-se/1008294904",
+    "mainScore": 16.6,
+    "climate": "A-",
+    "water": "B-",
+    "forests": "C",
+    "warningLink": "",
+    "warning": ""
+  },
+  {
+    "companyName": "Hanes",
+    "mainScoreLink": "https://www.sustainalytics.com/esg-rating/hanesbrands-inc/1012091066",
+    "mainScore": 13.9,
+    "climate": "A-",
+    "water": "B",
+    "forests": "C-",
+    "warningLink": "",
+    "warning": ""
+  }
+ ]

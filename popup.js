@@ -1,18 +1,41 @@
 let companyData = [];
+let homebg;
 
 document.getElementById('submitsearch').addEventListener('click', function() {
   console.log(document.getElementById("searching").value);
+  let searchValue = document.getElementById("searching").value;
+  searchValue = searchValue.charAt(0).toUpperCase() + searchValue.slice(1).toLowerCase();
+  console.log(searchValue)
   let selectedCompany = companyData.filter(company => (
-    company.companyName === document.getElementById("searching").value
+    company.companyName === searchValue
   ))
-  console.log(selectedCompany)
   selectedCompany = selectedCompany[0];
   let score = 100 - (selectedCompany.mainScore * 2);
-  document.getElementById('manufacturer').textContent = document.getElementById("searching").value;
+  if (selectedCompany.mainScore < 20) {
+    homebg = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+  } else homebg = "linear-gradient(359.28deg, #E6C3AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+  document.body.style.background = homebg;
+  document.getElementById('manufacturer').textContent = searchValue;
+  document.getElementById("searching").value = "";
   document.getElementById('main').innerHTML = score + "<span>%</span>";
+  let el = document.getElementById('circleBar');
+  el.classList.remove("anim");
+  void el.offsetWidth;
+  el.classList.add("anim");
   document.getElementById('climate').textContent = selectedCompany.climate;
   document.getElementById('water').textContent = selectedCompany.water;
   document.getElementById('forests').textContent = selectedCompany.forests;
+  if (selectedCompany.warning.length > 0) {
+    document.getElementById('warning-text').innerHTML = "&nbsp;" + selectedCompany.warning;
+    document.getElementById('warning-icon').src= "img/warning.png";
+  } else {
+    document.getElementById('warning-text').innerHTML = "&nbsp;No current warnings";
+    document.getElementById('warning-icon').src= "img/check.png";
+  }
+  document.querySelector('svg').addEventListener('click', function() {
+    let newURL = selectedCompany.mainScoreLink;
+    chrome.tabs.create({ url: newURL });
+  });
   /*
   if(score<15){
     document.getElementById('circleBar').style.color = "#89C73A";
@@ -32,6 +55,7 @@ document.querySelector("body").addEventListener('click', function(e) {
 })
 
 function hoverChanges() {
+  document.querySelector(".warning").style.display = "none";
   document.body.style.color = "white";
   document.getElementById("main").style.color = "white";
   document.querySelector("span").style.color = "white";
@@ -41,15 +65,25 @@ function hoverChanges() {
     smallCircles[i].style.color = "black";
     smallCircles[i].style.border = "1.5px solid #EFEFEF";
   }
+  document.getElementById("info").style.display = "block";
+  document.getElementById("manufacturer").style.color = "white";
+  document.getElementById("submitsearch").src = "img/white-search.png";
 }
 
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {  
+    info.manufacturer = info.manufacturer.split(' ')[0];
+    console.log(info.manufacturer);
     let selectedCompany = companyData.filter(company => (
       company.companyName === info.manufacturer
     ))
     selectedCompany = selectedCompany[0];
     let score = 100 - (selectedCompany.mainScore * 2);
+
+    if (selectedCompany.mainScore < 20) {
+      homebg = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+    } else homebg = "linear-gradient(359.28deg, #E6C3AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+    document.body.style.background = homebg;
 
     // let style = document.querySelector('style');
     // let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
@@ -60,39 +94,43 @@ const setDOMInfo = info => {
     document.getElementById('climate').textContent = selectedCompany.climate;
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
+    if (selectedCompany.warning.length > 0) {
+      document.getElementById('warning-text').innerHTML = "&nbsp;" + selectedCompany.warning;
+      document.getElementById('warning-icon').src= "img/warning.png";
+    } else {
+      document.getElementById('warning-text').innerHTML = "&nbsp;No current warnings";
+      document.getElementById('warning-icon').src= "img/check.png";
+    }
+    
     
     document.getElementById('info').addEventListener('click', function() {
-      var newURL = "https://www.cdp.net/en";
+      var newURL = "https://www.cdp.net/en/companies/companies-scores";
       chrome.tabs.create({ url: newURL });
     });
-    document.getElementById('circleBar').addEventListener('click', function() {
-      var newURL = "https://www.sustainalytics.com/";
+    document.querySelector('svg').addEventListener('click', function() {
+      let newURL = selectedCompany.mainScoreLink;
       chrome.tabs.create({ url: newURL });
     });
     document.getElementById('climate').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/climate-background.png')";
-      document.getElementById("manufacturer").style.color = "white";
-      document.getElementById("submitsearch").src = "img/search.png";
+      document.getElementById("info").style.background = "#65504F";
       hoverChanges();
     })
     document.getElementById('circleBar').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = 'none';
-      document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+      document.body.style.background = homebg;
       //window.location.href = "http://stackoverflow.com";
     });
 
     document.getElementById('forests').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/forest-background.png')";
-      document.getElementById("manufacturer").style.color = "white";
-      document.getElementById("submitsearch").src = "img/search.png";
+      document.getElementById("info").style.background = "#8D9575";
       hoverChanges();
     });
 
     document.getElementById('water').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/water-background.png')";
-      document.getElementById("manufacturer").style.color = "white";
-      document.getElementById("submitsearch").src = "img/search.png";
-
+      document.getElementById("info").style.background = "#556176";
       hoverChanges();
       
     });
@@ -100,13 +138,20 @@ const setDOMInfo = info => {
         
   
    document.querySelector('svg').addEventListener('mouseover', function() {
-
-      document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+    let smallCircles = document.querySelectorAll(".smaller-circle");
+    for (let i = 0; i < smallCircles.length; i++) {
+      smallCircles[i].style.background = "#14213D";
+      smallCircles[i].style.color = "white";
+      smallCircles[i].style.border = "none";
+    }
+      document.body.style.background = homebg;
       document.getElementById("main").style.color = "black";
       document.querySelector("span").style.color = "black";
+      document.body.style.color = "black";
       document.getElementById("manufacturer").style.color = "black";
-      document.getElementById("submitsearch").src = "img/searchIcon.png";
-
+      document.getElementById("submitsearch").src = "img/black-search.png";
+      document.getElementById("info").style.display = "none";
+      document.querySelector(".warning").style.display = "flex";
     });
 
   
