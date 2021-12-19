@@ -13,7 +13,18 @@ document.getElementById('submitsearch').addEventListener('click', function() {
   document.getElementById('climate').textContent = selectedCompany.climate;
   document.getElementById('water').textContent = selectedCompany.water;
   document.getElementById('forests').textContent = selectedCompany.forests;
+  /*
+  if(score<15){
+    document.getElementById('circleBar').style.color = "#89C73A";
+  } else if(score<20){
+    document.getElementById('circleBar').style.color = "#E6D05E";
+  }else{
+    document.getElementById('circleBar').style.color = "#DB3C32";
+  }
+  console.log(document.getElementById('circleBar').style.stroke)
+  */
 });
+
 
 function hoverChanges() {
   document.body.style.color = "white";
