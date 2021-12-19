@@ -15,6 +15,18 @@ document.getElementById('submitsearch').addEventListener('click', function() {
   document.getElementById('forests').textContent = selectedCompany.forests;
 });
 
+function hoverChanges() {
+  document.body.style.color = "white";
+  document.getElementById("main").style.color = "white";
+  document.querySelector("span").style.color = "white";
+  let smallCircles = document.querySelectorAll(".smaller-circle");
+  for (let i = 0; i < smallCircles.length; i++) {
+    smallCircles[i].style.background = "rgba(225, 225, 225, 0.5)";
+    smallCircles[i].style.color = "black";
+    smallCircles[i].style.border = "1.5px solid #EFEFEF";
+  }
+}
+
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {  
     let selectedCompany = companyData.filter(company => (
@@ -33,12 +45,18 @@ const setDOMInfo = info => {
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
 
+    document.getElementById('climate').addEventListener('mouseover', function() {
+      document.body.style.backgroundImage = "url('img/climate-background.png')";
+      hoverChanges();
+    });
     document.getElementById('forests').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/forest-background.png')";
+      hoverChanges();
     });
     document.getElementById('water').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/water-background.png')";
-      document.body.style.color = "white";
+      hoverChanges();
+      
     });
     // document.querySelector(".loading").style.display = "none";
     // document.querySelector(".main-data").style.display = "block";
