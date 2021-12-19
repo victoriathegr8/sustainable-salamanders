@@ -5,7 +5,9 @@
     font-family: "Poppins", "sans-serif";
   }
   body{
-    background: #efefef;
+    font-family: "Arial";
+    background: linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%);
+
     height: 400px;
     width: 350px;
     align-items: center;
@@ -37,20 +39,20 @@
   circle{
     fill: none;
     stroke: #008000;
-    stroke-width: 20px; 
+    stroke-width: 10px; 
     stroke-dasharray: 472; /*full is 472*/
     stroke-dashoffset: 472;
-    animation-delay: 3s;
     animation: anim 1s linear forwards;
   }
   svg{
     position: absolute;
+    top: 60px;
     left: 100px;
     margin-bottom: 5rem;
   }
   @keyframes anim{
   100%{
-      stroke-dashoffset: 100;
+      stroke-dashoffset: 150;
     }
   }
 
@@ -58,18 +60,18 @@ span {
     font-size: 20px;
   }
   .main-circle {
-    padding-top: 35px;
+    top: 60px;
     position:absolute;
     margin: 0 auto;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     line-height: 160px;
     border-radius: 50%;
     font-size: 50px;
     color: rgb(0, 0, 0);
     text-align: center;
     z-index: -1000;
-    left: 100px;
+    left: 80px;
 
   }
   .smallcircletext{
@@ -101,14 +103,12 @@ span {
     display: none;
   } */
   .SearchBar{
-    top: 75px;
-    position: absolute;
-    width: 260px;
+    width: 343px;
     height: 45px;
     background: rgba(130, 130, 130, 0.21);
     backdrop-filter: blur(4px);
     /* Note: backdrop-filter has minimal browser support */
-    border-color: grey;
+    border: 1px solid #E8e8e8;
     border-radius: 5px;
   }
   button{
@@ -119,4 +119,29 @@ span {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .hello{
+    border-radius: 50%;
+    position: absolute;
+    width: 147px;
+    height: 147px;
+  
+    background: rgba(225, 225, 225, 0.5);
+  
+    border: 1.5px solid #E8e8e8;
+    box-sizing: border-box;
+  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    z-index: -9999;
+    top: 68px;
+    left: 107px;
   }

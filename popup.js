@@ -38,6 +38,7 @@ const setDOMInfo = info => {
     });
     document.getElementById('water').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/water-background.png')";
+      document.body.style.color = "white";
     });
     // document.querySelector(".loading").style.display = "none";
     // document.querySelector(".main-data").style.display = "block";
@@ -71,6 +72,11 @@ const setDOMInfo = info => {
     .finally(() => {
       //finally something
     });
+
+    document.querySelector(".SearchBar").addEventListener('click', function() {
+      document.getElementById("manufacturer").style.display = "none";
+    })
+
     // ...query for the active tab...
     chrome.tabs.query({
       active: true,
