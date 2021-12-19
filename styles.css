@@ -65,7 +65,7 @@
   
   @keyframes anim{
   100%{
-      stroke-dashoffset: 95;
+      stroke-dashoffset: 0;
     }
   }
 

@@ -84,9 +84,10 @@ const setDOMInfo = info => {
     } else homebg = "linear-gradient(359.28deg, #E6C3AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
     document.body.style.background = homebg;
 
-    // let style = document.querySelector('style');
-    // let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
-    // style.innerHTML = innerStyle;
+    //let style = document.querySelector('style');
+    //let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score).toString() + ";}}"
+    //style.innerHTML = innerStyle;
+
     document.getElementById('manufacturer').textContent = info.manufacturer;
     document.getElementById('main').innerHTML = score + "<span>%</span>";
     document.getElementById('climate').textContent = selectedCompany.climate;
