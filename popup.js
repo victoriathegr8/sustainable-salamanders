@@ -32,7 +32,12 @@ const setDOMInfo = info => {
     document.getElementById('climate').textContent = selectedCompany.climate;
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
-
+    
+    document.getElementById('circleBar').addEventListener('mouseover', function() {
+      document.body.style.backgroundImage = 'none';
+      document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+      //window.location.href = "http://stackoverflow.com";
+    });
     document.getElementById('forests').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/forest-background.png')";
     });

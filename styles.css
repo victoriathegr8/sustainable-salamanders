@@ -103,7 +103,7 @@ span {
     display: none;
   } */
   .SearchBar{
-    width: 343px;
+    width: 290px;
     height: 45px;
     background: rgba(130, 130, 130, 0.21);
     backdrop-filter: blur(4px);
@@ -144,4 +144,7 @@ span {
     z-index: -9999;
     top: 68px;
     left: 107px;
+  }
+  .imgSearch{
+    
   }
