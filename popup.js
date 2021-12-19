@@ -87,7 +87,6 @@ const setDOMInfo = info => {
     // let style = document.querySelector('style');
     // let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
     // style.innerHTML = innerStyle;
-    document.getElementsByTagName("@keyframes anim").setAttribute("style", "stroke-dashoffset: "+100-selectedCompany.mainScore.toString());
     document.getElementById('manufacturer').textContent = info.manufacturer;
     document.getElementById('main').innerHTML = score + "<span>%</span>";
     document.getElementById('climate').textContent = selectedCompany.climate;
