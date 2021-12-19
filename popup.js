@@ -74,6 +74,8 @@ const setDOMInfo = info => {
 
    document.querySelector('svg').addEventListener('mouseover', function() {
       document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+      document.getElementById("main").style.color = "black";
+     document.querySelector("span").style.color = "black";
     });
 
     
