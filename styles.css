@@ -4,19 +4,21 @@
     display: flex;
     font-family: "Poppins", "sans-serif";
   }
+
   body{
     font-family: "Arial";
     background: linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%);
-
     height: 400px;
     width: 350px;
     align-items: center;
     justify-content: center;
   }
+
   .skill{
     width: 120px;
     height: 120px;
   }
+
   .outer{
     width: 120px;
     height: 120px;
@@ -24,6 +26,7 @@
     padding: 20px;
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
   }
+
   .inner{
     width: 80px;
     height: 80px;
@@ -32,10 +35,12 @@
     align-items: center;
     justify-content: center;
   }
+
   #number{
     font-weight: 600px;
     color: #555;
   }
+
   circle{
     fill: none;
     stroke: #008000;
@@ -44,12 +49,14 @@
     stroke-dashoffset: 472;
     animation: anim 1s linear forwards;
   }
+
   svg{
     position: absolute;
     top: 60px;
     left: 100px;
     margin-bottom: 5rem;
   }
+  
   @keyframes anim{
   100%{
       stroke-dashoffset: 150;
