@@ -44,10 +44,20 @@ const setDOMInfo = info => {
     document.getElementById('climate').textContent = selectedCompany.climate;
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
+    
+    document.getElementById('info').addEventListener('click', function() {
+      var newURL = "https://www.cdp.net/en";
+      chrome.tabs.create({ url: newURL });
+    });
 
     document.getElementById('climate').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/climate-background.png')";
       hoverChanges();
+    })
+    document.getElementById('circleBar').addEventListener('mouseover', function() {
+      document.body.style.backgroundImage = 'none';
+      document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+      //window.location.href = "http://stackoverflow.com";
     });
     document.getElementById('forests').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/forest-background.png')";
@@ -58,6 +68,25 @@ const setDOMInfo = info => {
       hoverChanges();
       
     });
+
+   document.querySelector('svg').addEventListener('mouseover', function() {
+      document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
+    });
+
+    
+  //document.body.style.color = "white";
+  // let smallCircles = document.querySelectorAll(".smaller-circle");
+  // for (let i = 0; i < smallCircles.length; i++) {
+  //   smallCircles[i].style.background = "rgba(225, 225, 225, 0.5)";
+  //   smallCircles[i].style.color = "white";
+  //   smallCircles[i].style.border = "none";
+  // }
+
+
+    // document.getElementById('water').addEventListener('mouseover', function() {
+    //   document.body.style.backgroundImage = "url('img/water-background.png')";
+    //   document.body.style.color = "white";
+    // });
     // document.querySelector(".loading").style.display = "none";
     // document.querySelector(".main-data").style.display = "block";
     // let manufacturers = [];
