@@ -67,6 +67,7 @@ const setDOMInfo = info => {
     document.getElementById('climate').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/climate-background.png')";
       document.getElementById("manufacturer").style.color = "white";
+      document.getElementById("submitsearch").src = "img/search.png";
       hoverChanges();
     })
     document.getElementById('circleBar').addEventListener('mouseover', function() {
@@ -74,14 +75,19 @@ const setDOMInfo = info => {
       document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
       //window.location.href = "http://stackoverflow.com";
     });
+
     document.getElementById('forests').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/forest-background.png')";
       document.getElementById("manufacturer").style.color = "white";
+      document.getElementById("submitsearch").src = "img/search.png";
       hoverChanges();
     });
+
     document.getElementById('water').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/water-background.png')";
       document.getElementById("manufacturer").style.color = "white";
+      document.getElementById("submitsearch").src = "img/search.png";
+
       hoverChanges();
       
     });
@@ -89,10 +95,13 @@ const setDOMInfo = info => {
         
   
    document.querySelector('svg').addEventListener('mouseover', function() {
+
       document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
       document.getElementById("main").style.color = "black";
       document.querySelector("span").style.color = "black";
       document.getElementById("manufacturer").style.color = "black";
+      document.getElementById("submitsearch").src = "img/searchIcon.png";
+
     });
 
   
