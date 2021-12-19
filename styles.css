@@ -146,8 +146,12 @@ span {
     left: 107px;
   }
   .infoButton{
-    width: 20;
-    height: 1000;
-    position: absolute;
-    background: rgba(6, 106, 219, 0.5);
+    background-color: #4476ff;
+    border: none;
+    color: white;
+    padding: 15px 139px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
