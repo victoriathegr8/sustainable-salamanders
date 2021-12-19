@@ -49,7 +49,10 @@ const setDOMInfo = info => {
       var newURL = "https://www.cdp.net/en";
       chrome.tabs.create({ url: newURL });
     });
-
+    document.getElementById('circleBar').addEventListener('click', function() {
+      var newURL = "https://www.sustainalytics.com/";
+      chrome.tabs.create({ url: newURL });
+    });
     document.getElementById('climate').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = "url('img/climate-background.png')";
       hoverChanges();
