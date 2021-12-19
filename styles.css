@@ -8,6 +8,10 @@
   body{
     font-family: "Arial";
     background: linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%);
+<<<<<<< HEAD
+=======
+    transition: 0.5s;
+>>>>>>> 416304a02182147fffc945cf7f24d653c8db5fe0
     height: 400px;
     width: 350px;
     align-items: center;
@@ -152,6 +156,13 @@ span {
     top: 68px;
     left: 107px;
   }
-  .imgSearch{
-    
+  .infoButton{
+    background-color: #4476ff;
+    border: none;
+    color: white;
+    padding: 15px 139px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }

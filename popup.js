@@ -33,6 +33,11 @@ const setDOMInfo = info => {
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
     
+    document.getElementById('info').addEventListener('click', function() {
+      var newURL = "https://www.cdp.net/en";
+      chrome.tabs.create({ url: newURL });
+    });
+
     document.getElementById('circleBar').addEventListener('mouseover', function() {
       document.body.style.backgroundImage = 'none';
       document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
@@ -50,6 +55,7 @@ const setDOMInfo = info => {
       document.body.style.background = "linear-gradient(359.28deg, #D8E6AF 4.1%, rgba(255, 255, 255, 0.25) 96.86%)";
     });
 
+    
   //document.body.style.color = "white";
   // let smallCircles = document.querySelectorAll(".smaller-circle");
   // for (let i = 0; i < smallCircles.length; i++) {
