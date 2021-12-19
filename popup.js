@@ -37,14 +37,13 @@ document.getElementById('submitsearch').addEventListener('click', function() {
     chrome.tabs.create({ url: newURL });
   });
   
-  if(score<15){
+  if(score>60){
     document.getElementById('circleBar').setAttribute('style','stroke: #89C73A');
-  } else if(score<20){
+  } else if(score>55){
     document.getElementById('circleBar').setAttribute('style','stroke: #E6D05E');
   }else{
     document.getElementById('circleBar').setAttribute('style','stroke: #DB3C32');
   }
-  console.log(document.getElementById('circleBar').style.stroke)
   
 });
 
@@ -88,7 +87,7 @@ const setDOMInfo = info => {
     // let style = document.querySelector('style');
     // let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
     // style.innerHTML = innerStyle;
-
+    document.getElementsByTagName("@keyframes anim").setAttribute("style", "stroke-dashoffset: "+100-selectedCompany.mainScore.toString());
     document.getElementById('manufacturer').textContent = info.manufacturer;
     document.getElementById('main').innerHTML = score + "<span>%</span>";
     document.getElementById('climate').textContent = selectedCompany.climate;
