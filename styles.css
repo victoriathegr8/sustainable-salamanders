@@ -98,7 +98,7 @@ span {
     text-align: center;
     background: #14213D;
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15);
-    
+    backdrop-filter: blur(5px);
   }
 
   .circle-container {
@@ -118,6 +118,7 @@ span {
     height: 45px;
     position: absolute;
     background: rgba(130, 130, 130, 0.21);
+    backdrop-filter: blur(5px);
     /* backdrop-filter: blur(4px); */
     /* Note: backdrop-filter has minimal browser support */
     border: 1px solid #E8e8e8;
@@ -132,6 +133,7 @@ span {
     margin-top: .2rem;
     /* margin-left: .5rem; */
     margin-right: .7rem;
+    z-index: 2;
   }
 
   button{

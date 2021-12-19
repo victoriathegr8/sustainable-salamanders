@@ -25,6 +25,11 @@ document.getElementById('submitsearch').addEventListener('click', function() {
   */
 });
 
+document.querySelector("body").addEventListener('click', function(e) {
+  if (e.target.id != "searching") {
+    document.getElementById("manufacturer").style.display = "block";
+  }
+})
 
 function hoverChanges() {
   document.body.style.color = "white";
