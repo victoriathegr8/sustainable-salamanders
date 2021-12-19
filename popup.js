@@ -1,18 +1,24 @@
 let companyData = [];
 
 // Update the relevant fields with the new data.
-const setDOMInfo = info => {
-  // document.querySelector(".loading").style.display = "none";
-  document.querySelector(".main-data").style.display = "block";
+const setDOMInfo = info => {  
     let selectedCompany = companyData.filter(company => (
       company.companyName === info.manufacturer
     ))
     selectedCompany = selectedCompany[0];
+    let score = 100 - (selectedCompany.mainScore * 2);
+
+    let style = document.querySelector('style');
+    let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
+    style.innerHTML = innerStyle;
+
     document.getElementById('manufacturer').textContent = info.manufacturer;
-    document.getElementById('main').textContent = selectedCompany.mainScore;
+    document.getElementById('main').textContent = score;
     document.getElementById('climate').textContent = selectedCompany.climate;
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
+    // document.querySelector(".loading").style.display = "none";
+    // document.querySelector(".main-data").style.display = "block";
     // let manufacturers = [];
     // let storage = localStorage["manufacturer"];
     // if (storage != undefined) {

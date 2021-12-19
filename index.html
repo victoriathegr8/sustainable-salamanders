@@ -3,18 +3,11 @@
   <head>
     <script type="text/javascript" src="popup.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <style></style>
   </head>
   <body>
-
-    <div class="loading">
-      <div class="skill">
-        <div class="outer">
-          <div class="inner">
-            <div id="number">100%</div>
-          </div>
-        </div>
-      </div>
-
+    <h1 id="manufacturer"></h1>
+    <div id="main" class="main-circle"></div>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
               <defs>
                   <linearGradient id="GradientColor">
@@ -22,18 +15,16 @@
                     <stop offset="100%" stop-color="#673ab7" />
                   </linearGradient>
               </defs>
-              <circle id="circleBar" cx="60" cy="80" r="60" stroke-linecap="round" />
+              <circle id="circleBar" cx="80" cy="80" r="70" stroke-linecap="round" />
       </svg>
       <script type="text/javascript" src="loading.js"></script>
-    </div>
 
+    <br><br><br><br><br><br>
     <div class="main-data">
-      <h1 id="manufacturer"></h1>
-      <div id="main" class="main-circle"></div>
       <div class="circle-container">
-        <div id="climate" class="climate-circle"></div>
-        <div id="water" class="water-circle"></div>
-        <div id="forests" class="forests-circle"></div>
+        <div id="climate" class="smaller-circle"></div>
+        <div id="water" class="smaller-circle"></div>
+        <div id="forests" class="smaller-circle"></div>
       </div>
     </div>
 
