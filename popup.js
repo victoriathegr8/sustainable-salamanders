@@ -8,15 +8,22 @@ const setDOMInfo = info => {
     selectedCompany = selectedCompany[0];
     let score = 100 - (selectedCompany.mainScore * 2);
 
-    let style = document.querySelector('style');
-    let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
-    style.innerHTML = innerStyle;
+    // let style = document.querySelector('style');
+    // let innerStyle = "@keyframes anim{100%{stroke-dashoffset: " + (472 - 472 * score) + ";}}"
+    // style.innerHTML = innerStyle;
 
     document.getElementById('manufacturer').textContent = info.manufacturer;
-    document.getElementById('main').textContent = score;
+    document.getElementById('main').innerHTML = score + "<span>%</span>";
     document.getElementById('climate').textContent = selectedCompany.climate;
     document.getElementById('water').textContent = selectedCompany.water;
     document.getElementById('forests').textContent = selectedCompany.forests;
+
+    document.getElementById('forests').addEventListener('mouseover', function() {
+      document.body.style.backgroundImage = "url('img/forest-background.png')";
+    });
+    document.getElementById('water').addEventListener('mouseover', function() {
+      document.body.style.backgroundImage = "url('img/water-background.png')";
+    });
     // document.querySelector(".loading").style.display = "none";
     // document.querySelector(".main-data").style.display = "block";
     // let manufacturers = [];
