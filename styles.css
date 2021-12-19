@@ -58,6 +58,7 @@ span {
     font-size: 20px;
   }
   .main-circle {
+    padding-top: 35px;
     position:absolute;
     margin: 0 auto;
     width: 160px;
@@ -100,14 +101,22 @@ span {
     display: none;
   } */
   .SearchBar{
-    top: 50px;
+    top: 75px;
     position: absolute;
-    width: 343px;
+    width: 260px;
     height: 45px;
-  
     background: rgba(130, 130, 130, 0.21);
     backdrop-filter: blur(4px);
     /* Note: backdrop-filter has minimal browser support */
     border-color: grey;
     border-radius: 5px;
+  }
+  button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
   }

@@ -1,5 +1,20 @@
 let companyData = [];
 
+document.getElementById('submitsearch').addEventListener('click', function() {
+  console.log(document.getElementById("searching").value);
+  let selectedCompany = companyData.filter(company => (
+    company.companyName === document.getElementById("searching").value
+  ))
+  console.log(selectedCompany)
+  selectedCompany = selectedCompany[0];
+  let score = 100 - (selectedCompany.mainScore * 2);
+  document.getElementById('manufacturer').textContent = document.getElementById("searching").value;
+  document.getElementById('main').innerHTML = score + "<span>%</span>";
+  document.getElementById('climate').textContent = selectedCompany.climate;
+  document.getElementById('water').textContent = selectedCompany.water;
+  document.getElementById('forests').textContent = selectedCompany.forests;
+});
+
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {  
     let selectedCompany = companyData.filter(company => (

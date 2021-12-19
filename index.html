@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="popup.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style></style>
   </head>
   <body>
-    <input class="SearchBar" type="text" name="search" placeholder="Search..">
+    <input id="searching" class="SearchBar" type="text" name="search" placeholder="Search..">
+    <input id="submitsearch" type="submit" value="Submit">
     <h1 id="manufacturer"></h1>
     <h1 id="manufacturer"></h1>
     <div id="main" class="main-circle"></div>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200px" height="200px">
               <defs>
                   <linearGradient id="GradientColor">
                     <stop offset="0%" stop-color="#e91e63" />
                     <stop offset="100%" stop-color="#673ab7" />
                   </linearGradient>
               </defs>
-              <circle id="circleBar" cx="80" cy="80" r="70" stroke-linecap="round" />
+              <circle id="circleBar" cx="80" cy="120" r="70" stroke-linecap="round" />
       </svg>
-      <script type="text/javascript" src="loading.js"></script>
 
     <br><br><br><br><br><br>
     <div class="main-data">
@@ -36,4 +35,5 @@
       <div id="forests" class="smaller-circle"></div>
     </div>
   </body>
+  <script type="text/javascript" src="popup.js"></script>
 </html>
